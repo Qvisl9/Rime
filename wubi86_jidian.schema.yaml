@@ -17,9 +17,9 @@ schema:
 switches:
   - name: ascii_mode
     reset: 0
-    states: [ 中文, 英文 ]
+    states: [ 中, En ]
   - name: zh_trad
-    reset: 0    # 初始状态为 0: 简 -> 简 1: 简 -> 繁
+    reset: 1    # 初始状态为 0: 简 -> 简 1: 简 -> 繁
     states: [ 简体, 繁体 ]
   - name: full_shape
     states: [ 半角, 全角 ]
@@ -55,7 +55,7 @@ engine:
   filters:
     - simplifier@tradition
 #    - lua_filter@*wubi86_jidian_single_char_first_filter # 单字优先
-    - lua_filter@*wubi86_jidian_single_char_only # 纯单字
+#    - lua_filter@*wubi86_jidian_single_char_only # 纯单字
 
 
 
@@ -79,7 +79,7 @@ translator:
   preedit_format:                       # 上屏码自定义
 #    - xform/.+//
   comment_format:                       # 提示码自定义
-#    - xform/.+//                        # 当前默认不提示编码，消除所有候选词后的提示码
+    - xform/.+//                        # 当前默认不提示编码，消除所有候选词后的提示码
 
 
 # 简入繁出 通过 OpenCC 支持 github地址：https://github.com/BYVoid/OpenCC
@@ -110,8 +110,8 @@ reverse_lookup:
     - xform/([nl])ue/$1üe/
     - xform/([jqxy])v/$1u/
 punctuator:
-#  import_preset: default
-  import_preset: symbols
+  import_preset: default
+#  import_preset: symbols
 # 开始快捷输入符号功能，前面留两个空格
 # 对应需要将下面 recognizer -> patterns 下面的 punct 字段的注释去掉
 
@@ -121,7 +121,7 @@ key_binder:
 recognizer:
   import_preset: default
   patterns:
-    punct: "^/([0-9]+[a-z]*|[a-z]+)$" # 注意前方需要有4个空格，跟下面对齐
+#    punct: "^/([0-9]+[a-z]*|[a-z]+)$" # 注意前方需要有4个空格，跟下面对齐
     reverse_lookup: "^z[a-z]*'?$" # 反查词条的正则
     calculator: "^coco.*$" # 计算器
 

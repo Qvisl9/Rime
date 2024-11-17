@@ -28702,7 +28702,6 @@ IMAX	imax	10
 滑下	imgh	10
 游山玩水	imgi	10
 没理	imgj	10
-没事	imgk	30
 没事	imgk	20
 洞	imgk	10
 油画	imgl	10
@@ -38355,8 +38354,8 @@ km/h	kmh	20
 车到山前必有路	lgmk	10
 輌	lgmm	10
 国风	lgmq	10
-辆	lgmw	20
-国内	lgmw	10
+辆	lgmw	10
+国内	lgmw	30
 輛	lgmy	10
 车	lgn	10
 国民	lgna	10
@@ -48048,7 +48047,6 @@ MacbookPro	mbp	10
 军需品	pfkk	10
 宗兄	pfkq	10
 寒噤	pfks	10
-10	pflg	20
 赛车	pflg	20
 安魂曲	pfma	10
 守财	pfmf	10
@@ -59380,8 +59378,8 @@ QQ	qq	10
 手术室	rspg	10
 打穿	rspw	10
 打禅	rspy	10
-打昏	rsqa	20
-打错	rsqa	10
+打错	rsqa	20
+打昏	rsqa	10
 打勾	rsqc	10
 打针	rsqf	10
 打印	rsqg	10
