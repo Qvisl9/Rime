@@ -21,7 +21,7 @@ function wubi86_jidian_date_translator(input, seg)
     -- %X	time (e.g., 23:48:10)
     -- %Y	full year (1998)
     -- %y	two-digit year (98) [00-99]
-    -- %%	the character `%´
+    -- %%	the character `%′
 
     -- 输入完整日期
     if (input == "datetime") then
